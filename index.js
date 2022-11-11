@@ -1,15 +1,19 @@
-const renderList = () => {
-  console.log("HERE");
-  const list = document.getElementById("nav__small__links");
-  const checkIfHide = list.classList.contains("component__hide");
+const menu = document.getElementById("items__small");
 
-  if (checkIfHide) {
-    list.classList.remove("component__hide");
-    const body = document.getElementsByTagName("BODY")[0];
-    body.classList.add("whiteBackground");
-  } else {
-    list.classList.add("component__hide");
-    const body = document.getElementsByTagName("BODY")[0];
-    body.classList.remove("whiteBackground");
-  }
+const renderShowList = () => {
+  menu.classList.toggle("show");
+};
+
+const renderRemoveList = () => {
+  menu.classList.toggle("hide");
+};
+
+const renderList = () => {
+  menu.classList.toggle("hide");
+  setTimeout(renderShowList, 1);
+};
+
+const removeFromView = () => {
+  menu.classList.toggle("show");
+  setTimeout(renderRemoveList, 300);
 };

@@ -9,35 +9,31 @@
   </head>
   <body>
     <nav>
-      <div class="nav__big">
-        <h1>TTO</h1>
-        <div class="nav__items">
+      <h1>TTO</h1>
+      <div class="items__big">
+        <h3>Home</h3>
+        <h3>About Us</h3>
+        <h3>Services</h3>
+        <h3>Contact US</h3>
+      </div>
+      <button class="login__button">
+        <span>LOGIN</span>
+      </button>
+      <button class="hamburguer" onclick="renderList()">
+        <span>HAMBURGUER</span>
+      </button>
+      <div id="items__small" class="hide">
+        <header>
+          <h1>TTO</h1>
+          <button class="hamburguer" onclick="removeFromView()">
+            <img src="./public/icons/closeIcon.svg" alt="close" />
+          </button>
+        </header>
+        <div class="items__small__list">
           <h3>Home</h3>
           <h3>About Us</h3>
           <h3>Services</h3>
-          <h3>Contact Us</h3>
-        </div>
-        <button>
-          <h3>LOGIN</h3>
-        </button>
-      </div>
-      <div class="nav__small">
-        <div class="nav__small__container">
-          <h1>TTO</h1>
-          <button onclick="renderList()">
-            <h3>Hamburguer</h3>
-          </button>
-        </div>
-        <div id="nav__small__links" class="component__hide">
-          <div class="nav__items">
-            <h3>Home</h3>
-            <h3>About Us</h3>
-            <h3>Services</h3>
-            <h3>Contact Us</h3>
-          </div>
-          <button>
-            <h3>LOGIN</h3>
-          </button>
+          <h3>Contact US</h3>
         </div>
       </div>
     </nav>

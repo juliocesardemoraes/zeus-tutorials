@@ -1,98 +1,119 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;900&display=swap");
 
+/*DESIGN SYSTEM*/
 h1,
-h3 {
+h3,
+span {
   font-family: "Outfit", sans-serif;
 }
 
 h1 {
-  font-size: 4em;
   font-weight: 900;
+  font-size: 64px;
 }
 
-h3 {
+h3,
+span {
   font-weight: 500;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  background: #222222;
-  height: 100vh;
-}
-
-.nav__big {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px 60px;
-  color: #fff;
-}
-
-.nav__items {
-  display: flex;
-  gap: 3em;
-}
-
-.nav__small {
-  display: none;
-  color: #fff;
 }
 
 button {
   all: unset;
+  width: 130px;
+  height: 69px;
   border: 1px solid #fff;
-  padding: 1em 2em;
-  transition: 0.8s ease-in-out;
+  text-align: center;
+  transition: all 1s;
 }
 
 button:hover {
-  background: #fff;
   cursor: pointer;
 }
-
-button:hover h3 {
-  color: #222222 !important;
-}
-
-.component__hide {
-  display: none !important;
-}
-
-.whiteBackground {
-  transition: 0.8s ease-in-out;
-}
-
-.whiteBackground .nav__small {
+button.login__button {
+  border: 1px solid #222;
   background: #fff;
-  color: #222222 !important;
-  transition: 0.8s ease-in-out;
+  color: #222;
+}
+/*DESIGN SYSTEM*/
+
+nav {
+  margin: 0 60px;
+  background: #222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@media only screen and (max-width: 800px) {
-  .nav__big {
+.items__big {
+  display: flex;
+  gap: 3em;
+}
+
+body {
+  height: 100vh;
+  background: #222;
+  color: #fff;
+}
+
+.hamburguer {
+  display: none;
+}
+
+#items__small {
+  position: absolute;
+  z-index: 1;
+  margin-left: 2000px;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: 1s all;
+}
+
+#items__small.hide {
+  display: none;
+}
+
+#items__small.show {
+  margin-left: 0px;
+  background: #fff;
+  color: #222;
+  transition: 1s all;
+}
+
+#items__small header,
+.items__small__list {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.items__small__list {
+  flex-direction: column;
+  margin-left: 0.5em;
+}
+
+#items__small h3 {
+  margin-left: 0.5em;
+}
+
+#items__small header {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+@media only screen and (max-width: 900px) {
+  .items__big {
     display: none;
   }
-  .nav__small {
+  .login__button {
+    display: none;
+  }
+  .hamburguer {
     display: block;
   }
-  .nav__small__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 60px;
-  }
-  #nav__small__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px 60px;
-  }
-  .nav__items {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+  nav {
+    margin: 0 30px;
   }
 }
