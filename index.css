@@ -1,98 +1,68 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap");
+/*DESIGN SYSTEM*/
+* {
+  margin: 0;
+  padding: 0;
+}
 
 h1,
 h3 {
-  font-family: "Outfit", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
-  font-size: 4em;
-  font-weight: 900;
+  font-size: 64px;
 }
 
 h3 {
+  font-size: 32px;
   font-weight: 500;
 }
 
+/*DESIGN SYSTEM*/
+
+main h3 {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+main {
+  margin-top: 4em;
+}
+
 body {
-  padding: 0;
-  margin: 0;
-  background: #222222;
-  height: 100vh;
-}
-
-.nav__big {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0px 60px;
   color: #fff;
+  background: #222;
 }
 
-.nav__items {
+nav {
+  margin-left: 4em;
+}
+
+#movie__section__container {
   display: flex;
-  gap: 3em;
+  justify-content: center;
 }
 
-.nav__small {
-  display: none;
-  color: #fff;
+#movie__section {
+  width: 90%;
+  display: flex;
+  overflow-x: auto;
 }
 
-button {
-  all: unset;
-  border: 1px solid #fff;
-  padding: 1em 2em;
-  transition: 0.8s ease-in-out;
+.relative__parent {
+  margin-left: -30px;
+  position: relative;
+  z-index: 0;
+  transition: 0.5s all;
+  padding-top: 2em;
+}
+.relative__parent img {
+  border-radius: 1em;
 }
 
-button:hover {
-  background: #fff;
-  cursor: pointer;
-}
-
-button:hover h3 {
-  color: #222222 !important;
-}
-
-.component__hide {
-  display: none !important;
-}
-
-.whiteBackground {
-  transition: 0.8s ease-in-out;
-}
-
-.whiteBackground .nav__small {
-  background: #fff;
-  color: #222222 !important;
-  transition: 0.8s ease-in-out;
-}
-
-@media only screen and (max-width: 800px) {
-  .nav__big {
-    display: none;
-  }
-  .nav__small {
-    display: block;
-  }
-  .nav__small__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 60px;
-  }
-  #nav__small__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px 60px;
-  }
-  .nav__items {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+.relative__parent:hover {
+  z-index: 1;
+  margin-left: 50px;
+  transform: translateY(-1rem) rotate(3deg);
 }
