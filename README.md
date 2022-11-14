@@ -2,12 +2,7 @@
 
 # CAROUSEL
 
-YOU HAVE TO GET AN TMDB API KEY FOR THIS CODE TO WORK.
-https://www.themoviedb.org/
-
-THIS REPO IS for all my coding classes on youtube.
-I will structure it using branches.
-
+# HOW TO DOWNLOAD THE CODE
 For example the hamburguer tutorial, will have a branch called hamburguer
 
 And you can check it out just by selecting it right here:
