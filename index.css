@@ -1,98 +1,116 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 90vw;
+  min-height: 100vh;
+  background: #1e1e1e;
+}
 
 h1,
-h3 {
-  font-family: "Outfit", sans-serif;
+h2,
+h3,
+p,
+span {
+  font-family: "Poppins", sans-serif;
+}
+
+span {
+  display: block;
 }
 
 h1 {
-  font-size: 4em;
   font-weight: 900;
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 3em;
 }
 
 h3 {
   font-weight: 500;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  background: #222222;
-  height: 100vh;
+p,
+span {
+  font-weight: 300;
+  font-size: 12px;
 }
 
-.nav__big {
+#card__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.card {
+  color: #fff;
+  background: #222;
+  display: flex;
+  max-width: 800px;
+  max-height: 400px;
+  border-radius: 1em;
+}
+
+.card__info {
+  width: 500px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 60px;
-  color: #fff;
 }
 
-.nav__items {
-  display: flex;
-  gap: 3em;
+.movie__score {
+  font-size: 32px;
 }
 
-.nav__small {
-  display: none;
-  color: #fff;
+.card img {
+  width: 300px;
+  height: 400px;
+  border-radius: 1em 0 0 1em;
 }
 
-button {
-  all: unset;
-  border: 1px solid #fff;
-  padding: 1em 2em;
-  transition: 0.8s ease-in-out;
+.card__info p {
+  margin-top: 3em;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
-button:hover {
-  background: #fff;
-  cursor: pointer;
+.skeleton {
+  background: #d9d9d9;
+  color: #d9d9d9;
+  border-radius: 0.25em;
+  min-width: 200px;
+  min-height: 50px;
 }
 
-button:hover h3 {
-  color: #222222 !important;
-}
-
-.component__hide {
-  display: none !important;
-}
-
-.whiteBackground {
-  transition: 0.8s ease-in-out;
-}
-
-.whiteBackground .nav__small {
-  background: #fff;
-  color: #222222 !important;
-  transition: 0.8s ease-in-out;
-}
-
-@media only screen and (max-width: 800px) {
-  .nav__big {
-    display: none;
+@keyframes shimmer {
+  0% {
+    background-position: 0px;
   }
-  .nav__small {
-    display: block;
+  100% {
+    background-position: 500px;
   }
-  .nav__small__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 60px;
-  }
-  #nav__small__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px 60px;
-  }
-  .nav__items {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+}
+
+.animateSkelli {
+  background: linear-gradient(to right, #eff1f3 8%, #e2e2e2 25%, #eff1f3 36%);
+  animation: shimmer 2s infinite linear;
 }
