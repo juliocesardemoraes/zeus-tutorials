@@ -39,10 +39,11 @@ const renderSkeleton = (container) => {
 
     const movieDescription = document.createElement("p");
 
-    /*EMPTY DIV */
+    /*-------*/
 
     const cardDate = document.createElement("p");
 
+    /*ADD SKELETON ANIMATION AND LOOK*/
     img.classList.add("skeleton", "animateSkelli");
     movieName.classList.add("skeleton", "animateSkelli");
     movieScore.classList.add("skeleton", "animateSkelli");
@@ -54,6 +55,8 @@ const renderSkeleton = (container) => {
     emptyDiv.append(cardHeader, movieDescription);
     cardinfo.append(emptyDiv, cardDate);
     maindiv.append(img, cardinfo);
+
+    /*---------------*/
 
     container.append(maindiv);
   }
@@ -81,9 +84,11 @@ const renderMovies = async (container, moviespayload) => {
     movieRating.classList.remove("skeleton", "animateSkelli");
     movieDescription.classList.remove("skeleton", "animateSkelli");
     date.classList.remove("skeleton", "animateSkelli");
-    //Add true images
+
+    //Add image from tmdb database
     img.src = `https://image.tmdb.org/t/p/w500/${moviespayload.results[i]?.poster_path}`;
 
+    //Add date from movie
     date.innerHTML = moviespayload.results[i]?.release_date;
 
     //Add movie name
@@ -109,7 +114,7 @@ const loadMovies = async () => {
 
   const moviespayload = await fetchLatestMovies("popular", 1);
 
-  /*FIRST LOAD - INSERT INFO INSIDE THE CARD ELEMENT */
+  /*FIRST LOAD - INSERT INFO INSIDE THE SKELETON CARD ELEMENT */
   renderMovies(container, moviespayload);
   /*--------*/
 };
