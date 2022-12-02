@@ -4,43 +4,92 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HAMBURGUER MENU</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Snap</title>
+    <link href="index.css" rel="stylesheet" />
   </head>
   <body>
+    <!--
     <nav>
-      <div class="nav__big">
-        <h1>TTO</h1>
-        <div class="nav__items">
-          <h3>Home</h3>
-          <h3>About Us</h3>
-          <h3>Services</h3>
-          <h3>Contact Us</h3>
-        </div>
-        <button>
-          <h3>LOGIN</h3>
-        </button>
-      </div>
-      <div class="nav__small">
-        <div class="nav__small__container">
-          <h1>TTO</h1>
-          <button onclick="renderList()">
-            <h3>Hamburguer</h3>
-          </button>
-        </div>
-        <div id="nav__small__links" class="component__hide">
-          <div class="nav__items">
-            <h3>Home</h3>
-            <h3>About Us</h3>
-            <h3>Services</h3>
-            <h3>Contact Us</h3>
-          </div>
-          <button>
-            <h3>LOGIN</h3>
-          </button>
-        </div>
-      </div>
+      <ul class="flex flex__column">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
     </nav>
-    <script src="index.js"></script>
+    -->
+
+    <div id="card__container">
+      <section
+        id="main__section"
+        class="flex flex__center flex__column flex-row flex__center__items"
+      >
+        <h1>Júlio César</h1>
+        <h3>Web Developer/ UI DESIGNER</h3>
+        <img
+          class="main__ilustration"
+          src="./public/images/isometric__art.svg"
+        />
+      </section>
+
+      <section
+        id="website__section"
+        class="flex flex__space__around flex__row flex-row flex__center__items hide"
+      >
+        <div class="text__over">
+          <h1>AprendendoCodando</h1>
+          <h3>E-learning website</h3>
+        </div>
+        <div class="image__container">
+          <img class="project__image" src="./public/images/ac.svg" />
+        </div>
+      </section>
+
+      <section
+        id="about__section"
+        class="flex flex__center flex__column flex-row flex__center__items hide"
+      >
+        <h1>About Me</h1>
+        <h3>E-learning website</h3>
+        <img src="./teste-01.svg" />
+      </section>
+      <section
+        id="contact__section"
+        class="flex flex__center flex__column flex-row flex__center__items hide"
+      >
+        <h1>Contato</h1>
+        <h3>E-learning website</h3>
+        <video
+          id="video__source"
+          class="responsive__video w__100 image__container"
+          autoplay
+          loop
+          muted
+          defaultmuted
+          playsinline
+        >
+          <source
+            controls="false"
+            src="https://giant.gfycat.com/ScholarlyAntiqueDormouse.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <img src="./teste-01.svg" />
+      </section>
+      <section
+        id="teste__section"
+        class="flex flex__center flex__column flex-row flex__center__items hide"
+      >
+        <h1>TESTE</h1>
+      </section>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script await defer src="index.js"></script>
   </body>
 </html>
