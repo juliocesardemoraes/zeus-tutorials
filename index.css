@@ -53,6 +53,25 @@ section {
   align-items: center;
 }
 
+#show__scroll {
+  width: 25px;
+  position: absolute;
+  bottom: 0;
+  margin-left: 64px;
+  margin-bottom: 12px;
+}
+#show__scroll h3 {
+  overflow-wrap: anywhere;
+}
+
+#show__scroll hr {
+  width: 0.1em;
+  margin-left: 0.25em;
+  margin-top: 1em;
+  height: 2em;
+  background: #fff;
+}
+
 @keyframes float {
   0% {
     margin-top: 0;
@@ -142,6 +161,18 @@ body {
   }
 }
 
+@keyframes showtext {
+  0% {
+    bottom: -250px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 0px;
+    opacity: 100%;
+  }
+}
+
 .hide__transition {
   animation: removeitself;
   animation-duration: 0.6s;
@@ -157,6 +188,11 @@ body {
   animation-duration: 0.5s;
 }
 
+.show__transition__text {
+  animation: showtext;
+  animation-duration: 0.5s;
+}
+
 .show__transition__top {
   animation: showItselfFromTop;
   animation-duration: 0.5s;
@@ -168,6 +204,10 @@ body {
 
 .show {
   display: flex;
+}
+
+.show__block {
+  display: block;
 }
 
 .image__container {
@@ -192,6 +232,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 100vh;
+  position: absolute;
 }
 
 .w__100 {
@@ -199,6 +240,12 @@ body {
 }
 
 @media only screen and (max-width: 1100px) {
+  #show__scroll {
+    width: 10px;
+  }
+  #show__scroll h3 {
+    font-size: 12px;
+  }
   #website__section {
     flex-direction: column-reverse;
   }
