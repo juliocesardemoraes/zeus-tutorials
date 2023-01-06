@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="modal__container" class="hide">
+      <div id="modal">
+        <h2 id="modal__title" class="mb_1"></h2>
+        <p id="modal__description" class="mb_1"></p>
+        <img id="modal__image" />
+        <button class="modal__button">Assinar</button>
+      </div>
+    </div>
+    <main>
+      <img src="./static/logo.svg" />
+      <div class="double__itens m__1">
+        <div class="m__50">
+          <h1 class="p__text">
+            Ter uma moto por assinatura nunca foi tão fácil
+          </h1>
+          <img src="./static/Intersect.svg" alt="mulher na moto" />
+        </div>
+        <div class="left m__50">
+          <div class="container">
+            <img
+              src="static/arrow.svg"
+              onclick="move()"
+              class="container__move"
+            />
+            <div class="container__card">
+              <header>
+                <h3 id="nome__moto">Scooter Elétrica Voltz EV1</h3>
+                <h4 id="preço__moto">619,90 R$</h4>
+              </header>
+              <div class="back">
+                <img class="moto" src="./static/moto0.svg" />
+              </div>
+            </div>
+            <img
+              src="static/arrow.svg"
+              onclick="move()"
+              class="container__move invert"
+            />
+          </div>
+          <button id="submitButton" onclick="showModal()">Saiba mais</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./index.js"></script>
+</html>
