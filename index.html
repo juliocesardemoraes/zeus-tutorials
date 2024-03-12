@@ -2,45 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HAMBURGUER MENU</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>FLEX</title>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <nav>
-      <div class="nav__big">
-        <h1>TTO</h1>
-        <div class="nav__items">
-          <h3>Home</h3>
-          <h3>About Us</h3>
-          <h3>Services</h3>
-          <h3>Contact Us</h3>
-        </div>
-        <button>
-          <h3>LOGIN</h3>
-        </button>
-      </div>
-      <div class="nav__small">
-        <div class="nav__small__container">
-          <h1>TTO</h1>
-          <button onclick="renderList()">
-            <h3>Hamburguer</h3>
-          </button>
-        </div>
-        <div id="nav__small__links" class="component__hide">
-          <div class="nav__items">
-            <h3>Home</h3>
-            <h3>About Us</h3>
-            <h3>Services</h3>
-            <h3>Contact Us</h3>
-          </div>
-          <button>
-            <h3>LOGIN</h3>
-          </button>
-        </div>
-      </div>
+    <nav class="flex space__between">
+      <h2 class="logo">DAREBEE</h2>
+      <button class="button button_nav">Teste agora</button>
     </nav>
-    <script src="index.js"></script>
+    <main class="flex">
+      <div class="flex flex__column gap-1">
+        <h1 class="title">WORKOUT WITH ME</h1>
+        <p>
+          Uma seleção de exercícios que você pode fazer em casa a qualquer
+          momento
+        </p>
+        <button class="button__visit">Visite o site</button>
+      </div>
+      <img src="workout.png" />
+    </main>
   </body>
 </html>

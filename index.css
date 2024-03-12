@@ -1,98 +1,78 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500;900&display=swap");
-
-h1,
-h3 {
-  font-family: "Outfit", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
-h1 {
-  font-size: 4em;
-  font-weight: 900;
-}
-
-h3 {
-  font-weight: 500;
+html {
+  background: #181818;
+  min-height: 100vh;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  background: #222222;
-  height: 100vh;
+  max-width: 1200px;
+  padding: 16px;
+  margin: auto;
+  color: #fff;
 }
 
-.nav__big {
+.flex {
   display: flex;
+}
+
+.space__between {
   justify-content: space-between;
-  align-items: center;
-  margin: 0px 60px;
-  color: #fff;
 }
 
-.nav__items {
-  display: flex;
-  gap: 3em;
+.title {
+  font-size: 132px;
 }
 
-.nav__small {
-  display: none;
-  color: #fff;
+.logo {
+  font-size: 32px;
+}
+
+.button__text {
+  font-size: 16px;
 }
 
 button {
-  all: unset;
+  background: none;
   border: 1px solid #fff;
-  padding: 1em 2em;
-  transition: 0.8s ease-in-out;
+  color: #fff;
+  padding: 8px 32px;
 }
 
 button:hover {
-  background: #fff;
   cursor: pointer;
 }
 
-button:hover h3 {
-  color: #222222 !important;
+.flex__column {
+  flex-direction: column;
 }
 
-.component__hide {
-  display: none !important;
-}
-
-.whiteBackground {
-  transition: 0.8s ease-in-out;
-}
-
-.whiteBackground .nav__small {
+.button__visit {
+  margin-top: 100px;
+  width: 200px;
   background: #fff;
-  color: #222222 !important;
-  transition: 0.8s ease-in-out;
+  color: #181818;
+  font-weight: 600;
+  transition: 1s all;
 }
 
-@media only screen and (max-width: 800px) {
-  .nav__big {
-    display: none;
-  }
-  .nav__small {
-    display: block;
-  }
-  .nav__small__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0px 60px;
-  }
-  #nav__small__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px 60px;
-  }
-  .nav__items {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
+.button_nav {
+  transition: 1s all;
+}
+
+.button_nav:hover {
+  background: #fff;
+  color: #181818;
+  transition: 1s all;
+}
+
+.button__visit:hover {
+  background: #181818;
+  color: #fff;
+  transition: 1s all;
 }
