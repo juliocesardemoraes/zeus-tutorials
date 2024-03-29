@@ -21,20 +21,25 @@ body {
   display: flex;
 }
 
+.flex__responsive {
+  display: flex;
+  justify-content: space-between;
+}
+
 .space__between {
   justify-content: space-between;
 }
 
 .title {
-  font-size: 132px;
+  font-size: 4rem;
 }
 
 .logo {
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .button__text {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 button {
@@ -53,7 +58,7 @@ button:hover {
 }
 
 .button__visit {
-  margin-top: 100px;
+  margin-top: 6rem;
   width: 200px;
   background: #fff;
   color: #181818;
@@ -75,4 +80,36 @@ button:hover {
   background: #181818;
   color: #fff;
   transition: 1s all;
+}
+
+.workout__image {
+  width: 25vw;
+  min-width: 150px;
+  max-width: 250px;
+}
+
+.info__section {
+  margin-top: 5rem;
+  max-width: 50vw;
+}
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    font-size: 12px;
+  }
+  .workout__image {
+    margin: auto;
+  }
+  .flex__responsive {
+    flex-direction: column-reverse;
+  }
+  .info__section {
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .title {
+    font-size: 6.5rem;
+  }
 }
