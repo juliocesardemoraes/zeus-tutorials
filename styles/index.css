@@ -1,0 +1,117 @@
+:root {
+  --background-color: #181717;
+  --primary-color: #fff;
+  --secundary-color: #cdcdcd;
+  --tertiary-color: #999a9c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* FONTS */
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+p {
+  font-size: 0.75rem;
+  font-weight: 200;
+}
+span {
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+
+/* BODY */
+html {
+  background: var(--background-color);
+  min-height: 100vh;
+}
+
+body {
+  max-width: 672px;
+  margin: auto;
+  padding: 1rem;
+  color: var(--primary-color);
+}
+
+.secundary__color {
+  color: var(--secundary-color);
+}
+
+.tertiary__color {
+  color: var(--tertiary-color);
+}
+
+a {
+  all: unset;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex__column {
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.align__center {
+  align-items: center;
+}
+
+.justify__between {
+  justify-content: space-between;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.primary__button {
+  border: none;
+  background: var(--primary-color);
+  color: var(--background-color);
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+}

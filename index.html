@@ -1,46 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HAMBURGUER MENU</title>
-    <link rel="stylesheet" href="index.css" />
+    <title>Multi language system</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <nav>
-      <div class="nav__big">
-        <h1>TTO</h1>
-        <div class="nav__items">
-          <h3>Home</h3>
-          <h3>About Us</h3>
-          <h3>Services</h3>
-          <h3>Contact Us</h3>
+  <body onload="changeLanguage(null)">
+    <header>
+      <nav class="flex align__center justify__between">
+        <a href="/"> <h2>Blogs</h2> </a>
+        <div>
+          <img src="/public/brflag.svg" onclick="changeLanguage('pt-br')" />
+          <img src="/public/enflag.svg" onclick="changeLanguage('en')" />
         </div>
-        <button>
-          <h3>LOGIN</h3>
-        </button>
-      </div>
-      <div class="nav__small">
-        <div class="nav__small__container">
-          <h1>TTO</h1>
-          <button onclick="renderList()">
-            <h3>Hamburguer</h3>
-          </button>
-        </div>
-        <div id="nav__small__links" class="component__hide">
-          <div class="nav__items">
-            <h3>Home</h3>
-            <h3>About Us</h3>
-            <h3>Services</h3>
-            <h3>Contact Us</h3>
-          </div>
-          <button>
-            <h3>LOGIN</h3>
-          </button>
-        </div>
-      </div>
-    </nav>
-    <script src="index.js"></script>
+      </nav>
+    </header>
+    <main class="mt-4">
+      <h1 class="tertiary__color" data-translate="myBlogs">Meus blogs</h1>
+      <button class="mt-1 mb-4 primary__button" data-translate="new">
+        Novo
+      </button>
+
+      <ul class="flex flex__column gap-2">
+        <li>
+          <a href="/posts.html" class="flex align__center justify__between">
+            <div>
+              <h3 class="color__primary" data-translate="howToCreateAnWebsite">
+                Como criar um site?
+              </h3>
+              <span
+                class="tertiary__color"
+                data-translate="howToCreateAnWebsiteDate"
+                >Janeiro 27,2024</span
+              >
+            </div>
+            <span
+              class="tertiary__color"
+              data-translate="howToCreateAnWebsiteViews"
+              >80 visualizações</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="/posts.html" class="flex align__center justify__between">
+            <div>
+              <h3 class="color__primary" data-translate="howToCreateAnBackend">
+                Como fazer um backend
+              </h3>
+              <span
+                class="tertiary__color"
+                data-translate="howToCreateAnBackendDate"
+                >Janeiro 23,2024</span
+              >
+            </div>
+            <span
+              class="tertiary__color"
+              data-translate="howToCreateAnBackendViews"
+              >40 visualizações</span
+            >
+          </a>
+        </li>
+      </ul>
+    </main>
+    <script type="module" src="./javascript/index.js"></script>
   </body>
 </html>
