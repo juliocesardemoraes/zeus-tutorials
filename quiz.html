@@ -13,45 +13,21 @@
     />
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body class="flex justify-center">
+  <body onload="renderFirstQuestion()" class="flex justify-center">
     <main class="mt-16 max-width-sm">
       <div class="progress br-1">
-        <div class="progress-value br-1"></div>
+        <div id="progress-value" class="progress-value br-1"></div>
       </div>
-      <h1>Questão 1</h1>
-      <h2 class="mt-1">O que é css?</h2>
-      <div class="flex flex-col gap-1 mt-2">
-        <div class="question-box br-1">
-          <p>
-            CSS é uma linguagem de marcação usada para estruturar o conteúdo de
-            páginas web.
-          </p>
-        </div>
-        <div class="question-box br-1">
-          <p>
-            CSS é uma linguagem de marcação usada para estruturar o conteúdo de
-            páginas web.
-          </p>
-        </div>
-        <div class="question-box br-1">
-          <p>
-            CSS é uma linguagem de marcação usada para estruturar o conteúdo de
-            páginas web.
-          </p>
-        </div>
-
-        <div class="question-box br-1">
-          <p>
-            CSS é uma linguagem de marcação usada para estruturar o conteúdo de
-            páginas web.
-          </p>
-        </div>
-      </div>
+      <h1 id="question__h1">Questão 1</h1>
+      <h2 id="question__title" class="mt-1">O que é css?</h2>
+      <div id="questions__container" class="flex flex-col gap-1 mt-2"></div>
       <div class="mt-1 flex gap-1 justify-end">
         <button class="button-secundary br-1">Desistir</button>
-        <button class="button-primary br-1">Próximo</button>
+        <button class="button-primary br-1" onclick="nextQuestion()">
+          Próximo
+        </button>
       </div>
     </main>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

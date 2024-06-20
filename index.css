@@ -27,6 +27,12 @@ a {
 button {
   all: unset;
   padding: 0.5rem 1rem;
+  opacity: 0.95;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
 h1 {
@@ -134,6 +140,17 @@ button-primary
 .question-box {
   background: var(--dark-color);
   padding: 1rem;
+  opacity: 0.8;
+}
+
+.question-box__selected {
+  background: var(--primary-color);
+  padding: 1rem;
+}
+
+.question-box:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
 .button-secundary {
