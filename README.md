@@ -1,17 +1,8 @@
-# zeustutorials
+# React + Vite
 
-THIS REPO IS for all my coding classes on youtube. 
-I will structure it using branches.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-For example the hamburguer tutorial, will have a branch called hamburguer
-And you can check it out just by selecting it right here:
+Currently, two official plugins are available:
 
-
-
-![Checkout Branch](https://user-images.githubusercontent.com/42243423/200885182-c5a5cc99-9763-41cc-9733-80c687a04a0a.png)
-
-And then downloading/cloning it:
-
-
-![Download it](https://user-images.githubusercontent.com/42243423/200885297-b054db7b-7399-4e17-852e-371ee8f93a25.png)
-
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
