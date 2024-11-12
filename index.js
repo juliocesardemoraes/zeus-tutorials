@@ -1,59 +1,44 @@
-const idToFind = 9999;
-const lengthAll = 10000;
+const pokeAPIBaseUrl = "https://pokeapi.co/api/v2/pokemon/";
 
-// Implementação O(n)
-const studentsArray = [
-  { id: 101, name: "Ana" },
-  { id: 102, name: "João" },
-  { id: 103, name: "Maria" },
-  { id: 104, name: "Pedro" },
-  { id: 105, name: "Lucas" },
-  ...Array.from({ length: lengthAll }, (_, i) => ({
-    id: i + 106,
-    name: `Student${i + 106}`,
-  })),
-];
+// Criar uma promise
+const fetchPokemon = async (id) => {
+  const response = await fetch(`${pokeAPIBaseUrl}${id}`);
+  const data = await response.json();
+  return data;
+};
 
-// Implementação O(1)
-const studentsObject = {};
-
-// Este for adiciona o array de estudantes
-// num formato de objeto para que seja
-// acessado mais rapidamente O(1)
-for (let i = 0; i < studentsArray.length; i++) {
-  studentsObject[studentsArray[i].id] = studentsArray[i];
+// Função para buscar Pokémon usando Promise.all() (paralelamente)
+async function fetchPokemonsSimultaneously(ids) {
+  const promises = ids.map((id) => fetchPokemon(id)); // Cria um array de promessas
+  console.log(promises);
+  const pokemons = await Promise.all(promises); // Executa todas as promises em paralelo
+  return pokemons;
 }
 
-console.log(studentsObject);
-
-// FUNÇÃO SIMPLES PARA FAZER UM FIND
-function findStudentByIdArray(id) {
-  return studentsArray.find((student) => student.id === id);
+// Função para buscar Pokémon de forma sequencial
+async function fetchPokemonsSequentially(ids) {
+  const pokemons = [];
+  for (const id of ids) {
+    const pokemon = await fetchPokemon(id); // Await executa um fetch por vez
+    pokemons.push(pokemon);
+  }
+  return pokemons;
 }
 
-// FUNÇÃO SIMPLES PARA FAZER UM GET NO OBJETO
-function findStudentByIdObject(id) {
-  return studentsObject[id];
-}
+// IDs de Pokémon para buscar
+const pokemonIds = Array.from({ length: 100 }, (_, i) => i + 1);
+console.log(pokemonIds);
 
-console.time("Array Find");
-const startArray = performance.now();
-const resultArray = findStudentByIdArray(idToFind);
-const endArray = performance.now();
-console.timeEnd("Array Find");
+// PROMISE ALL
+console.time("Promise.all");
+fetchPokemonsSimultaneously(pokemonIds)
+  .then(() => console.timeEnd("Promise.all"))
+  .catch((error) =>
+    console.error("Erro no fetchPokemonsSimultaneously:", error)
+  );
 
-console.time("Object Direct Access");
-const startObject = performance.now();
-const resultObject = findStudentByIdObject(idToFind);
-const endObject = performance.now();
-console.timeEnd("Object Direct Access");
-
-const timeArray = endArray - startArray;
-const timeObject = endObject - startObject;
-const percentDifference = ((timeArray - timeObject) / timeArray) * 100;
-
-console.log(
-  `Diferença de tempo: ${percentDifference.toFixed(
-    2
-  )}% mais rápido ao usar acesso direto em objeto`
-);
+// SEQUENCIAL
+console.time("Sequential");
+fetchPokemonsSequentially(pokemonIds)
+  .then(() => console.timeEnd("Sequential"))
+  .catch((error) => console.error("Erro no fetchPokemonsSequentially:", error));
